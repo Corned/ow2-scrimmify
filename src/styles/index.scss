@@ -1,0 +1,70 @@
+// Base
+// @import "base/reset";
+@import "base/colors";
+@import "base/elements";
+@import "base/globals";
+@import "base/typography";
+
+// Utilities
+
+// Layout
+
+// Components
+@import "components/image-form";
+@import "components/data-display";
+
+
+.container {
+  z-index: 1;
+  width: 350px;
+  height: 50px;
+  border-radius: 6px;
+  overflow: hidden;
+  
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  .first {
+    position: relative;
+    padding: 10px 20px;
+    height: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+
+    .map-thumbnail {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      transform: scale(1.1);
+      filter: blur(2px) brightness(75%);
+    }
+  
+    .info {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+  
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      
+      .info__map {
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+  
+      .info__code {
+        background-color: #E9500C;
+        padding: 5px 10px;
+        border-radius: 4px;
+      }
+    }
+
+  }
+
+}
+

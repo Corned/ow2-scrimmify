@@ -1,0 +1,28 @@
+.image-form {
+  width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .image-form__image-container {
+    width: inherit;
+    max-width: 500px;
+    background-color: darken($background, 10%);
+    padding: 10px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: auto;
+      max-width: inherit;
+      max-height: 300px;
+      object-fit: scale-down;
+      border-radius: 4px;
+    }
+  }
+}

@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react"
 
-function App() {
+
+const Scrim = ({ map, code }) => {
+  const thumbnailUrl = map
+    .replace(":", "")
+    .replace("'", "")
+    .replace(" ", "")
+    .replace(" ", "")
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="first">
+        <img className="map-thumbnail" src={`/maps/${thumbnailUrl}.webp`}/>
+
+        <div className="info">
+          <p className="info__map">{ map }</p>
+          <p className="info__code">{ code }</p>
+        </div>
+      </div>
     </div>
-  );
+
+  )
 }
 
-export default App;
+
+
+function App() {
+
+
+  return (
+    <div className="App">
+      <h1>scrimmify</h1>
+
+      <Scrim map={"Shambali Monastery"} code={"ABCDEF"} />
+      <Scrim map={"New Queen Street"} code={"ABCDEF"} />
+      <Scrim map={"Eichenwalde"} code={"ABCDEF"} />
+      <Scrim map={"Blizzard World"} code={"ABCDEF"} />
+
+
+    </div>
+  )
+}
+
+export default App

@@ -1,0 +1,23 @@
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: $background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.App {
+  padding: 100px 0 0 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+}
